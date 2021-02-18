@@ -4,8 +4,7 @@ Project Ideas
 
 Idea #1 Decentralized Vaccine Tracker
 
-Currently, Covid vaccines are a top priority in helping the world get back into normal shape. Using blockchain, we can keep records of who has taken vaccines and who is remaining, this also avoids redudancy.
-Also We will also be able to work on the data we get from the application and provide statistics about the whole vaccine program. This data we can further use to make data models. 
+Currently, Covid vaccines are a top priority in helping the world get back into normal shape. Using blockchain, we can keep records of who has taken vaccines and who is remaining, this also avoids redudancy. We can also set rules for validating the vaccine program, These rules can be applied by vaccination companies in their vaccination drive. Also We will be able to work on the data we get from the application and provide statistics about the whole vaccine program. This data we can further use to make data models. 
 
 Taken from the blogspot
 
