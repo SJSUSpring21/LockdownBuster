@@ -17,9 +17,12 @@ Idea #3: Street vendors support network
 Through this application we intend to provide an application to support network of vendors. This will create a local network among small businesses.
 Bringing street vendors in an organized group has several advantages:
 
-•	Vendors will get much needed financial help and support to bootstrap their business. 
+•	Vendors will get much needed financial help and support to bootstrap their business.
+
 •	Govt will have much desired success in getting them on epayments and cashless economy.
+
 •	this network will be able to uplift them and help them move into high value quadrant. For example, a street food hawker graduates to become a food truck owner. A vegetable seller eventually becomes a “Fresh cut vegies” supplier to apartments. 
+
 •	This network can be connected to micro lenders and other entrepreneurs such as organic farmers.
 
 Project Members
