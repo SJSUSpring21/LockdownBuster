@@ -7,7 +7,7 @@ Currently, Covid vaccines are a top priority in helping the world get back into 
 
 Taken from the blogspot
 Idea #2: Use AI to measure and improve Microservice performance
-Microservices architecture is common ways to deploy containerized software in the cloud. However, increasing number of microservices increases management complexity due to distributed architecture. Network latency and load balancing are other challenges. See this use case for inspiration.
+Microservices architecture is common ways to deploy containerized software in the cloud. However, increasing number of microservices increases management complexity due to distributed architecture. Network latency and load balancing are other challenges. 
  
 Idea #3: Street vendors support network
 Bringing street vendors in an organized group has several advantages:
