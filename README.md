@@ -1,35 +1,24 @@
-# Team20
+# Lockdown Buster
+## Problem Statement
+Covid has caused goverment action to mandate lockdowns and limit the area of travel a person can go. This has caused many businesses to struggle and even shut down during this period of time since much of their customer base is at home. Having an application that predicts the safeness of an area can provide users can help bring customers back to businesses that reside in that area. 
 
-Project Ideas
+## Abstract
+Currently, Covid vaccines are a top priority in helping the world get back into normal shape. Using machine learning, we can predict the likelihood of an area lifting lockdown restrictions based on the percentage of people being vaccinated in that area and other factors within our dataset. Our dataset provides raw data such as zip code, vaccination rate, population in a certain zip code, amount of vaccinations distributed by date, etc. Through this, we can provide statistical analysis, generating different reports and graphs to approach this issue. These different statistics will provide insights on whether a particular area is safe or not. The machine learning model will analyze these factors and break down the safety rating of an area into different tiers. Users will be able to see these different tiers on a web interface.
 
-Idea #1 Decentralized Vaccine Tracker
+## Approach
+- Take the dataset inputs (zip code, population size per zip code, date, vaccines distributed, etc) and filter the raw data to parse important data points.
+- Import the important data points to train and test our machine learning model.
+- The machine learning model will output a prediction of how safe the area is for lifting lockdown restrictions.
+- Store the information given by the machine learning model in a database and call later.
+- Create web interface to take inputs and display information to users about how safe the area is for lifting lockdown restrictions.
 
-Currently, Covid vaccines are a top priority in helping the world get back into normal shape. Using blockchain, we can keep records of who has taken vaccines and who is remaining, this also avoids redudancy. We can also set rules for validating the vaccine program, These rules can be applied by vaccination companies in their vaccination drive. Also We will be able to work on the data we get from the application and provide statistics about the whole vaccine program. This data we can further use to make data models. 
+## Persona
+Nikitha Kallepalli
+Rakesh Nagarajappa
+Saurabh Vijaywargia
+William Wong
 
-Taken from the blogspot
-
-Idea #2: Use AI to measure and improve Microservice performance
-
-MMicroservices architecture is common ways to deploy containerized software in the cloud. Through this application we will be able to make our system more efficient by
-monitoring the performance of the various microservices that are part of this system.
-However, increasing number of microservices increases management complexity due to distributed architecture. Network latency and load balancing are other challenges.
-and it will be a good learning with respect to the system design.
- 
-Idea #3: Street vendors support network
-
-Through this application we intend to provide an application to support network of vendors. This will create a local network among small businesses.
-Bringing street vendors in an organized group has several advantages:
-
--	Vendors will get much needed financial help and support to bootstrap their business.
-
--	Govt will have much desired success in getting them on epayments and cashless economy.
-
--	this network will be able to uplift them and help them move into high value quadrant. For example, a street food hawker graduates to become a food truck owner. A vegetable seller eventually becomes a “Fresh cut vegies” supplier to apartments. 
-
--	This network can be connected to micro lenders and other entrepreneurs such as organic farmers.
-
-Project Members
-- Nikitha Kallepalli
-- Rakesh Nagarajappa
-- Saurabh Vijaywargia
-- William Wong
+## Dataset Links
+https://healthdata.gov/dataset/covid-19-vaccinations-zip-code
+https://data.sccgov.org/COVID-19/COVID-19-vaccinations-among-county-residents-by-da/s4w2-n2ht
+https://data.sccgov.org/COVID-19/COVID-19-vaccinations-among-county-residents-by-ag/rfme-d4cs
