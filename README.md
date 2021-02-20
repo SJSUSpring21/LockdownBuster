@@ -9,6 +9,7 @@ The greatest challenge we face in the current crisis is striking the right balan
 # Abstract
 
 Our analyses suggest that, assuming that minimum epidemiological standards are met (declining new cases for one week or two weeks, adequate intensive care unit capacity and testing and tracing protocols), the latter approach — sequential opening of sectors starting with those least likely to generate a substantial resurgence of the virus — is the most promising
+This framework lays out the measures that each county must meet, based on indicators that capture disease burden, testing, and health equity. A county may be more restrictive than this framework. This framework also notes signals of concern, including impacted healthcare capacity that may lead towards a dimming intervention. This framework replaces the former County Data Monitoring metrics
 
 # Approach
 The Blueprint for a Safer Economy relies on two measures – case rate[i] and test positivity[ii] – to determine when a county can move to a less restrictive tier with more sector openings and resultant increased interaction among residents.  In order to avoid a surge of infections, the level of baseline infection in a community should be progressively lower as there is more movement and mixing
