@@ -1,35 +1,18 @@
-# Team20
+# Problem statement
 
-Project Ideas
+The greatest challenge we face in the current crisis is striking the right balance between preventing not only the damage inflicted by Covid-19 but also that which comes from a severe contraction of economic activity.This is a matter of both life and death, and prosperity or poverty, as a deep recession is likely to cause widespread hardship, including increased mortality rates for reasons other than the virus. We must, therefore, find smart strategies for reopening businesses while minimizing health risks.The sectors to be released from lockdown as a matter of priority could be chosen based on the following analysis:
+ 1. Inability to conduct core business from home:Industries such as accommodation and food services, construction, healthcare, transportation, and warehousing could be the targets of a first wave of lockdown release because they are less suitable for virtual work. Some organizations in these sectors have already been deemed essential and continued operations through the pandemic.
+ 2. Importance to the national economy:In some countries, manufacturing accounts for a larger percentage of GDP than accommodation and food services (e.g., China or Ireland). In others it is the opposite (e.g., Australia or Norway).
+ 3.Value added per worker: All else equal, it makes sense to release fewer (less risk of contagion) but more productive (smaller economic loss) people.
+ 4.Business viability: One must also take into account the viability of certain sectors. For example, retailers are facing severe hardships and the business model makes it harder for state support to compensate.
 
-Idea #1 Decentralized Vaccine Tracker
+# Abstract
 
-Currently, Covid vaccines are a top priority in helping the world get back into normal shape. Using blockchain, we can keep records of who has taken vaccines and who is remaining, this also avoids redudancy. We can also set rules for validating the vaccine program, These rules can be applied by vaccination companies in their vaccination drive. Also We will be able to work on the data we get from the application and provide statistics about the whole vaccine program. This data we can further use to make data models. 
+Our analyses suggest that, assuming that minimum epidemiological standards are met (declining new cases for one week or two weeks, adequate intensive care unit capacity and testing and tracing protocols), the latter approach — sequential opening of sectors starting with those least likely to generate a substantial resurgence of the virus — is the most promising
 
-Taken from the blogspot
+# Approach
+The Blueprint for a Safer Economy relies on two measures – case rate[i] and test positivity[ii] – to determine when a county can move to a less restrictive tier with more sector openings and resultant increased interaction among residents.  In order to avoid a surge of infections, the level of baseline infection in a community should be progressively lower as there is more movement and mixing
 
-Idea #2: Use AI to measure and improve Microservice performance
+# Persona
 
-MMicroservices architecture is common ways to deploy containerized software in the cloud. Through this application we will be able to make our system more efficient by
-monitoring the performance of the various microservices that are part of this system.
-However, increasing number of microservices increases management complexity due to distributed architecture. Network latency and load balancing are other challenges.
-and it will be a good learning with respect to the system design.
- 
-Idea #3: Street vendors support network
-
-Through this application we intend to provide an application to support network of vendors. This will create a local network among small businesses.
-Bringing street vendors in an organized group has several advantages:
-
--	Vendors will get much needed financial help and support to bootstrap their business.
-
--	Govt will have much desired success in getting them on epayments and cashless economy.
-
--	this network will be able to uplift them and help them move into high value quadrant. For example, a street food hawker graduates to become a food truck owner. A vegetable seller eventually becomes a “Fresh cut vegies” supplier to apartments. 
-
--	This network can be connected to micro lenders and other entrepreneurs such as organic farmers.
-
-Project Members
-- Nikitha Kallepalli
-- Rakesh Nagarajappa
-- Saurabh Vijaywargia
-- William Wong
+# Dataset links
