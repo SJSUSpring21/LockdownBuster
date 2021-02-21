@@ -13,10 +13,8 @@ Currently, Covid vaccines are a top priority in helping the world get back into 
 - Create web interface to take inputs and display information to users about how safe the area is for lifting lockdown restrictions.
 
 ## Persona
-Nikitha Kallepalli
-Rakesh Nagarajappa
-Saurabh Vijaywargia
-William Wong
+- This project is catered towards governments for providing info on the liklihood of when lockdowns should be imposed or lifted.
+- This project provide information to individuals on how safe an area is.
 
 ## Dataset Links
 https://healthdata.gov/dataset/covid-19-vaccinations-zip-code
