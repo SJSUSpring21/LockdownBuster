@@ -1,19 +1,44 @@
-# Problem statement
+# Lockdown Buster
 
-The greatest challenge we face in the current crisis is striking the right balance between preventing not only the damage inflicted by Covid-19 but also that which comes from a severe contraction of economic activity.This is a matter of both life and death, and prosperity or poverty, as a deep recession is likely to cause widespread hardship, including increased mortality rates for reasons other than the virus. We must, therefore, find smart strategies for reopening businesses while minimizing health risks.The sectors to be released from lockdown as a matter of priority could be chosen based on the following analysis:
- 1. Inability to conduct core business from home:Industries such as accommodation and food services, construction, healthcare, transportation, and warehousing could be the targets of a first wave of lockdown release because they are less suitable for virtual work. Some organizations in these sectors have already been deemed essential and continued operations through the pandemic.
- 2. Importance to the national economy:In some countries, manufacturing accounts for a larger percentage of GDP than accommodation and food services (e.g., China or Ireland). In others it is the opposite (e.g., Australia or Norway).
- 3.Value added per worker: All else equal, it makes sense to release fewer (less risk of contagion) but more productive (smaller economic loss) people.
- 4.Business viability: One must also take into account the viability of certain sectors. For example, retailers are facing severe hardships and the business model makes it harder for state support to compensate.
+## Problem Statement
+Covid has caused goverment action to mandate lockdowns and limit the area of travel a person can go. This has caused many businesses to struggle and even shut down during this period of time since much of their customer base is at home. Having an application that predicts the safeness of an area can provide users can help bring customers back to businesses that reside in that area. 
 
-# Abstract
+## Abstract
+Currently, Covid vaccines are a top priority in helping the world get back into normal shape. Using machine learning, we can predict the likelihood of an area lifting lockdown restrictions based on the percentage of people being vaccinated in that area and other factors within our dataset. Our dataset provides raw data such as zip code, vaccination rate, population in a certain zip code, amount of vaccinations distributed by date, etc. Through this, we can provide statistical analysis, generating different reports and graphs to approach this issue. These different statistics will provide insights on whether a particular area is safe or not. The machine learning model will analyze these factors and break down the safety rating of an area into different tiers. Users will be able to see these different tiers on a web interface.
 
-Our analyses suggest that, assuming that minimum epidemiological standards are met (declining new cases for one week or two weeks, adequate intensive care unit capacity and testing and tracing protocols), the latter approach — sequential opening of sectors starting with those least likely to generate a substantial resurgence of the virus — is the most promising
-This framework lays out the measures that each county must meet, based on indicators that capture disease burden, testing, and health equity. A county may be more restrictive than this framework. This framework also notes signals of concern, including impacted healthcare capacity that may lead towards a dimming intervention. This framework replaces the former County Data Monitoring metrics
+## Approach
+- Take the dataset inputs (zip code, population size per zip code, date, vaccines distributed, etc) and filter the raw data to parse important data points.
+- Import the important data points to train and test our machine learning model.
+- The machine learning model will output a prediction of how safe the area is for lifting lockdown restrictions.
+- Store the information given by the machine learning model in a database and call later.
+- Create web interface to take inputs and display information to users about how safe the area is for lifting lockdown restrictions.
 
-# Approach
-The Blueprint for a Safer Economy relies on two measures – case rate[i] and test positivity[ii] – to determine when a county can move to a less restrictive tier with more sector openings and resultant increased interaction among residents.  In order to avoid a surge of infections, the level of baseline infection in a community should be progressively lower as there is more movement and mixing
+## Persona
+- This project is catered towards governments for providing info on the liklihood of when lockdowns should be imposed or lifted.
+- This project provide information to individuals on how safe an area is.
 
-# Persona
+## Dataset Links
+https://healthdata.gov/dataset/covid-19-vaccinations-zip-code
+https://data.sccgov.org/COVID-19/COVID-19-vaccinations-among-county-residents-by-da/s4w2-n2ht
+https://data.sccgov.org/COVID-19/COVID-19-vaccinations-among-county-residents-by-ag/rfme-d4cs
 
-# Dataset links
+
+# Backup Idea
+
+## Street Vendors Support Network
+
+### Problem Statement
+Currently, there is no infrastructure that allows vendors to contact each other in a systematic approach. This gives issues for small businesses or vendors that need support in certain areas in order for their business to survive. By providing a support network for these street vendors, this can create a local network where these businesses can support each other and produce growth in these businesses. 
+
+### Abstract
+Providing a support network for local businesses can help them financially and create a community where vendors will see success. Government initiative towards going to epayments and a cashless economy will be accelerated as the community can help create guidelines and helpful resources for small vendors to follow. Businesses can supply each other the necessary resources to continue operating and small vendors can bring their names out to the community and become "certified" providers. The network will act as a platform of sorts, providing different details about businesses (descriptions, locations, etc), a forum board to allow for the discussions between businesses to happen, and certifications/verifications of local businesses.
+
+### Approach
+- Develop a network model used to provide communication between businesses.
+- Create web interface for users to interact within network.
+- REST API based backend to handle UI requests.
+- Establish a database to store local vendors/business information.
+
+### Persona
+- This network is catered towards small businesses and vendors within their local areas.
+- This network can be connected to micro lenders and other entrepreneurs such as organic farmers.
