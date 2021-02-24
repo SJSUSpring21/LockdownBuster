@@ -1,4 +1,4 @@
-# Lockdown Buster
+# Lockdown Buster - Approved
 ## Problem Statement
 Covid has caused goverment action to mandate lockdowns and limit the area of travel a person can go. This has caused many businesses to struggle and even shut down during this period of time since much of their customer base is at home. Having an application that predicts the safeness of an area can provide users can help bring customers back to businesses that reside in that area. 
 
