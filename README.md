@@ -22,4 +22,5 @@ https://data.sccgov.org/COVID-19/COVID-19-vaccinations-among-county-residents-by
 https://data.sccgov.org/COVID-19/COVID-19-vaccinations-among-county-residents-by-ag/rfme-d4cs
 
 ## System Architecture
-![system_architecture](https://user-images.githubusercontent.com/31523964/110229220-a27d3c80-7ebc-11eb-9f95-72a69eca1afc.png)
+
+![sys_arch](https://user-images.githubusercontent.com/31523964/110229353-ae1d3300-7ebd-11eb-8df6-653bae2d1360.png)
