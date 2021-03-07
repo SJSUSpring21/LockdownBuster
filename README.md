@@ -20,3 +20,6 @@ Currently, Covid vaccines are a top priority in helping the world get back into 
 https://healthdata.gov/dataset/covid-19-vaccinations-zip-code
 https://data.sccgov.org/COVID-19/COVID-19-vaccinations-among-county-residents-by-da/s4w2-n2ht
 https://data.sccgov.org/COVID-19/COVID-19-vaccinations-among-county-residents-by-ag/rfme-d4cs
+
+## System Architecture
+![system_architecture](https://user-images.githubusercontent.com/31523964/110229220-a27d3c80-7ebc-11eb-9f95-72a69eca1afc.png)
