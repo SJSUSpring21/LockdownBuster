@@ -1,0 +1,10 @@
+vaccination rate/# of vaccinations
+# of covid cases
+population density
+# of deaths
+average age of population
+# of people getting covid testing
+gdp of the country
+average income for person in country/state
+countries main source of revenue
+# of recovered people
