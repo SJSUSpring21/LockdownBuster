@@ -1,4 +1,4 @@
-Country_Region,Date,Doses_admin,People_partially_vaccinated,People_fully_vaccinated,Report_Date_String,UID
+Country,Date,Doses_admin,People_partially_vaccinated,People_fully_vaccinated,Report_Date_String,UID
 Afghanistan,2021-04-07,120000.0,120000.0,0.0,2021/04/07,4
 Africa,2021-04-16,14867246.0,10039775.0,4599547.0,2021/04/16,
 Albania,2021-04-15,314622.0,6073.0,655.0,2021/04/15,8
