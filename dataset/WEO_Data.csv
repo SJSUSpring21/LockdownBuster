@@ -38,7 +38,7 @@ China,"Gross domestic product, current prices",U.S. dollars,Billions,"See notes 
 Colombia,"Gross domestic product, current prices",U.S. dollars,Billions,"See notes for:  Gross domestic product, current prices (National currency).",323.375,271.463,295.61,2020
 Comoros,"Gross domestic product, current prices",U.S. dollars,Billions,"See notes for:  Gross domestic product, current prices (National currency).",1.19,1.222,1.309,2018
 Democratic Republic of the Congo,"Gross domestic product, current prices",U.S. dollars,Billions,"See notes for:  Gross domestic product, current prices (National currency).",50.418,49.077,55.088,2019
-Republic of Congo,"Gross domestic product, current prices",U.S. dollars,Billions,"See notes for:  Gross domestic product, current prices (National currency).",12.542,10.232,12.022,2018
+Congo,"Gross domestic product, current prices",U.S. dollars,Billions,"See notes for:  Gross domestic product, current prices (National currency).",12.542,10.232,12.022,2018
 Costa Rica,"Gross domestic product, current prices",U.S. dollars,Billions,"See notes for:  Gross domestic product, current prices (National currency).",63.946,61.45,61.178,2019
 Côte d'Ivoire,"Gross domestic product, current prices",U.S. dollars,Billions,"See notes for:  Gross domestic product, current prices (National currency).",58.539,61.402,70.991,2017
 Croatia,"Gross domestic product, current prices",U.S. dollars,Billions,"See notes for:  Gross domestic product, current prices (National currency).",60.759,56.925,65.217,2019
@@ -77,7 +77,7 @@ Hungary,"Gross domestic product, current prices",U.S. dollars,Billions,"See note
 Iceland,"Gross domestic product, current prices",U.S. dollars,Billions,"See notes for:  Gross domestic product, current prices (National currency).",24.837,21.715,24.155,2018
 India,"Gross domestic product, current prices",U.S. dollars,Billions,"See notes for:  Gross domestic product, current prices (National currency).","2,870.50","2,708.77","3,049.70",2021
 Indonesia,"Gross domestic product, current prices",U.S. dollars,Billions,"See notes for:  Gross domestic product, current prices (National currency).","1,120.04","1,059.64","1,158.78",2020
-Islamic Republic of Iran,"Gross domestic product, current prices",U.S. dollars,Billions,"See notes for:  Gross domestic product, current prices (National currency).",581.252,635.724,682.859,2020
+Iran,"Gross domestic product, current prices",U.S. dollars,Billions,"See notes for:  Gross domestic product, current prices (National currency).",581.252,635.724,682.859,2020
 Iraq,"Gross domestic product, current prices",U.S. dollars,Billions,"See notes for:  Gross domestic product, current prices (National currency).",222.434,172.119,190.733,2020
 Ireland,"Gross domestic product, current prices",U.S. dollars,Billions,"See notes for:  Gross domestic product, current prices (National currency).",398.379,418.716,476.663,2019
 Israel,"Gross domestic product, current prices",U.S. dollars,Billions,"See notes for:  Gross domestic product, current prices (National currency).",394.652,402.639,446.708,2020
@@ -88,7 +88,7 @@ Jordan,"Gross domestic product, current prices",U.S. dollars,Billions,"See notes
 Kazakhstan,"Gross domestic product, current prices",U.S. dollars,Billions,"See notes for:  Gross domestic product, current prices (National currency).",181.667,164.792,187.836,2020
 Kenya,"Gross domestic product, current prices",U.S. dollars,Billions,"See notes for:  Gross domestic product, current prices (National currency).",95.41,99.287,106.041,2019
 Kiribati,"Gross domestic product, current prices",U.S. dollars,Billions,"See notes for:  Gross domestic product, current prices (National currency).",0.198,0.2,0.231,2017
-Korea,"Gross domestic product, current prices",U.S. dollars,Billions,"See notes for:  Gross domestic product, current prices (National currency).","1,646.74","1,630.87","1,806.71",2020
+South Korea,"Gross domestic product, current prices",U.S. dollars,Billions,"See notes for:  Gross domestic product, current prices (National currency).","1,646.74","1,630.87","1,806.71",2020
 Kosovo,"Gross domestic product, current prices",U.S. dollars,Billions,"See notes for:  Gross domestic product, current prices (National currency).",7.953,7.789,8.81,2019
 Kuwait,"Gross domestic product, current prices",U.S. dollars,Billions,"See notes for:  Gross domestic product, current prices (National currency).",134.624,107.936,126.93,2019
 Kyrgyz Republic,"Gross domestic product, current prices",U.S. dollars,Billions,"See notes for:  Gross domestic product, current prices (National currency).",8.455,7.471,7.47,2019
@@ -134,6 +134,7 @@ Palau,"Gross domestic product, current prices",U.S. dollars,Billions,"See notes 
 Panama,"Gross domestic product, current prices",U.S. dollars,Billions,"See notes for:  Gross domestic product, current prices (National currency).",66.788,52.938,59.377,2019
 Papua New Guinea,"Gross domestic product, current prices",U.S. dollars,Billions,"See notes for:  Gross domestic product, current prices (National currency).",24.829,23.575,24.536,2019
 Paraguay,"Gross domestic product, current prices",U.S. dollars,Billions,"See notes for:  Gross domestic product, current prices (National currency).",38.145,35.875,37.836,2019
+Palestine,"Gross domestic product, current prices",U.S. dollars,Billions,"See notes for:  Gross domestic product, current prices (National currency).",16.28,16.28,37.836,2019
 Peru,"Gross domestic product, current prices",U.S. dollars,Billions,"See notes for:  Gross domestic product, current prices (National currency).",230.746,203.772,225.918,2020
 Philippines,"Gross domestic product, current prices",U.S. dollars,Billions,"See notes for:  Gross domestic product, current prices (National currency).",376.795,362.243,402.638,2020
 Poland,"Gross domestic product, current prices",U.S. dollars,Billions,"See notes for:  Gross domestic product, current prices (National currency).",595.772,594.18,642.121,2020
@@ -152,7 +153,7 @@ Serbia,"Gross domestic product, current prices",U.S. dollars,Billions,"See notes
 Seychelles,"Gross domestic product, current prices",U.S. dollars,Billions,"See notes for:  Gross domestic product, current prices (National currency).",1.58,1.131,0.948,2019
 Sierra Leone,"Gross domestic product, current prices",U.S. dollars,Billions,"See notes for:  Gross domestic product, current prices (National currency).",4.119,4.204,4.42,2018
 Singapore,"Gross domestic product, current prices",U.S. dollars,Billions,"See notes for:  Gross domestic product, current prices (National currency).",374.39,339.981,374.394,2019
-Slovak Republic,"Gross domestic product, current prices",U.S. dollars,Billions,"See notes for:  Gross domestic product, current prices (National currency).",105.091,104.088,117.664,2019
+Slovakia,"Gross domestic product, current prices",U.S. dollars,Billions,"See notes for:  Gross domestic product, current prices (National currency).",105.091,104.088,117.664,2019
 Slovenia,"Gross domestic product, current prices",U.S. dollars,Billions,"See notes for:  Gross domestic product, current prices (National currency).",54.18,52.838,59.132,2020
 Solomon Islands,"Gross domestic product, current prices",U.S. dollars,Billions,"See notes for:  Gross domestic product, current prices (National currency).",1.579,1.567,1.644,2019
 Somalia,"Gross domestic product, current prices",U.S. dollars,Billions,"See notes for:  Gross domestic product, current prices (National currency).",4.944,4.92,5.367,2019
