@@ -5,7 +5,7 @@ from fbprophet import Prophet
 app = Flask(__name__)
 
 def getPrediction(county_name):
-    county = pd.read_csv("../dataset/CountyWiseCases.csv")
+    county = pd.read_csv("~/LockDownBuster/LockdownBuster/dataset/CountyWiseCases.csv")
     county['date'] = pd.DatetimeIndex(county['date'])
     df = county.loc[(county["area"] == county_name)]
 
@@ -16,11 +16,11 @@ def getPrediction(county_name):
     apr = get_active_case_prediction(df)
 
     #getting vaccination prediction
-    vpr = get_vaccination_prediction(county_name)
-    return {"prediction_ac" : apr[['ds','yhat']].iloc[0,1],"prediction_vc" : vpr[['ds','yhat']].iloc[0,1],"current_status":curr}
+    vpr = get_vaccination_prediction(county_name,df.population.unique()[0])
+    return {"prediction_ac" : apr[['ds','yhat']].iloc[0,1],"prediction_vc" : vpr,"current_status":curr}
 
-def get_vaccination_prediction(county_name):
-    df = pd.read_csv("../dataset/covid19vaccinesbycounty.csv", usecols=[0, 1, 13])
+def get_vaccination_prediction(county_name, population):
+    df = pd.read_csv("~/LockDownBuster/LockdownBuster/dataset/covid19vaccinesbycounty.csv", usecols=[0, 1, 13])
     df['administered_date'] = pd.DatetimeIndex(df['administered_date'])
     # Getting the county wise data
     df = df.loc[(df["county"] == county_name)]
@@ -30,7 +30,14 @@ def get_vaccination_prediction(county_name):
     df.drop('administered_date', axis=1, inplace=True)
     df_train = df[0:]
     df_train.columns = ['y', 'ds']
-    return vac_predMod(df_train)
+    vp = vac_predMod(df_train);
+    date_op = "2021-07-19"
+    for index, row in vp.iterrows():
+        if(row['yhat'] > population):
+            date_op = row['ds']
+            break;
+
+    return date_op;
 
 
 
@@ -48,7 +55,7 @@ def get_active_case_prediction(df):
 def vac_predMod(df_train):
     m = Prophet(interval_width=0.95)
     model = m.fit(df_train)
-    future = m.make_future_dataframe(periods=180, freq='D')
+    future = m.make_future_dataframe(periods=360, freq='D')
     forecast = m.predict(future)
     return forecast
 
