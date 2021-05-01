@@ -13,11 +13,11 @@ def getPrediction(county_name):
     curr = get_current_status(df)
 
     #getting active case prediction
-    apr = get_active_case_prediction(df)
+    apr = get_active_case_prediction(df,df.population.unique()[0])
 
     #getting vaccination prediction
     vpr = get_vaccination_prediction(county_name,df.population.unique()[0])
-    return {"prediction_ac" : apr[['ds','yhat']].iloc[0,1],"prediction_vc" : vpr,"current_status":curr}
+    return {"prediction_ac" : apr,"prediction_vc" : vpr,"current_status":curr}
 
 def get_vaccination_prediction(county_name, population):
     df = pd.read_csv("~/LockDownBuster/LockdownBuster/dataset/covid19vaccinesbycounty.csv", usecols=[0, 1, 13])
@@ -41,7 +41,7 @@ def get_vaccination_prediction(county_name, population):
 
 
 
-def get_active_case_prediction(df):
+def get_active_case_prediction(df, population):
     df = df[df['date'] > '2020-12-01']
     df = df[["date", "reported_cases"]]
     df['ds'] = pd.DatetimeIndex(df['date'])
@@ -49,7 +49,15 @@ def get_active_case_prediction(df):
     df_train = df[0:]
     df_train.columns = ['y', 'ds']
     pr = ac_preMod(df_train)
-    return pr
+    fc = pr[['ds', 'yhat']].tail(7)
+    c_sum = 0;
+    div = population/ 100000
+    for index, row in fc.iterrows():
+        if (row['yhat'] > 0):
+            t_a = row['yhat'] / div
+            c_sum += t_a
+    pos = c_sum / 7;
+    return pos
 
 
 def vac_predMod(df_train):
@@ -62,7 +70,7 @@ def vac_predMod(df_train):
 def ac_preMod(df_train):
     m = Prophet(interval_width=0.95, changepoint_prior_scale=0.5)
     model = m.fit(df_train)
-    future = m.make_future_dataframe(periods=90, freq='D')
+    future = m.make_future_dataframe(periods=180, freq='D')
     forecast = m.predict(future)
     return forecast
 
