@@ -4,6 +4,10 @@ import pandas as pd
 from fbprophet import Prophet
 app = Flask(__name__)
 
+# used to estimate when different sectors should open up
+weight_factor = 1
+sectors = ["Education", "Limited Services", "Food Chain", "Industries", "Construction", "Entertainment", "Retail Sector"]
+
 def getPrediction(county_name):
     county = pd.read_csv("~/LockDownBuster/LockdownBuster/dataset/CountyWiseCases.csv")
     county['date'] = pd.DatetimeIndex(county['date'])
@@ -33,10 +37,25 @@ def get_vaccination_prediction(county_name, population):
     vp = vac_predMod(df_train);
     date_op = "2021-07-19"
     for index, row in vp.iterrows():
-        if(row['yhat'] > population):
+        if sectors == 'Education':
+            weight_factor = 1
+        elif sectors == 'Limited Services':
+            weight_factor = 0.8
+        elif sectors == 'Food Chain':
+            weight_factor = 0.8
+        elif sectors == 'Industries':
+            weight_factor = 0.7
+        elif sectors == 'Construction':
+            weight_factor = 0.8
+        elif sectors == 'Entertainment':
+            weight_factor = 0.9
+        elif sectors == 'Retail Sector':
+            weight_factor = 0.9
+        else:
+            weight_factor = 1
+        if(row['yhat'] > (weight_factor * population)):
             date_op = row['ds']
             break;
-
     return date_op;
 
 
@@ -117,6 +136,7 @@ def predict():
     Fuel_Type_Diesel=0
     if request.method == 'POST':
         county = json.loads(request.data)['county']
+        sectors = json.loads(request.data)['sector']
         return getPrediction(county)
 
 
