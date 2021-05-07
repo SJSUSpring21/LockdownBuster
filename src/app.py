@@ -1,8 +1,12 @@
-from flask import Flask, render_template, request,json
+from flask import Flask, render_template, request,json,make_response
 import requests
+import os
 import pandas as pd
 from fbprophet import Prophet
+from flask_cors import CORS, cross_origin
 app = Flask(__name__)
+cors = CORS(app)
+app.config['CORS_HEADERS'] = 'Content-Type'
 
 # used to estimate when different sectors should open up
 weight_factor = 1
@@ -133,14 +137,16 @@ def hello_world():
 
 @app.route("/predict", methods=['POST'])
 def predict():
-    Fuel_Type_Diesel=0
     if request.method == 'POST':
         county = json.loads(request.data)['county']
         sectors = json.loads(request.data)['sector']
-        return getPrediction(county)
+        sector = json.loads(request.data)['sector']
+        order = getPrediction(county)
+        return order
 
 
 if __name__ == '__main__':
-    app.run()
+    port = int(os.getenv("PORT", 8080))
+    app.run(host='0.0.0.0', port=port)
 
 
