@@ -132,7 +132,7 @@ export default class App extends Component {
 
       let req = {"county": this.state.name, "sector": this.state.sector_sel} 
       
-      axios.post("http://127.0.0.1:5000/predict", req)
+      axios.post("http://ec2-3-93-187-100.compute-1.amazonaws.com:8080/predict", req)
       
       .then(res => {
         let response = res
@@ -196,7 +196,7 @@ export default class App extends Component {
             GET STATUS 
             </button>
             
-            {this.state.loading && <div style={{position: 'fixed', left: '44%', top: '75%'}}> <img src={Spinner} alt=""/> </div>}
+            {this.state.loading && <div style={{position: 'fixed', left: '47%', top: '25%'}}> <img src={Spinner} alt=""/> </div>}
           
               <div>
                 {(this.state.loading === false && this.state.status !== "") ? (<CardComponent title={this.state.name} status={this.state.status} time={this.state.predictionTime}/>): (<></>)}
@@ -228,13 +228,13 @@ export default class App extends Component {
                   <Card style={{borderRadius:"8%", backgroundColor:"#d97641", justifyContent: 'center', textAlign:'center', fontSize:'100%', fontWeight:"bolder"}}>
                     <p>MODERATE</p>
                   </Card>
-                  <p style={{fontWeight:"bolder"}}>Some indoor business operations are open wth modifications</p>
+                  <p style={{fontWeight:"bolder"}}>Some indoor business operations are open with modifications</p>
               </label >
               <label style={{width:'15%', height:"150px", margin: '0% 5% 0% 0%'}}>
                   <Card style={{borderRadius:"8%", backgroundColor:"#e6b735",  justifyContent: 'center', textAlign:'center', fontSize:'100%', fontWeight:"bolder"}}> 
                     <p>MINIMAL</p>
                   </Card>
-                  <p style={{fontWeight:"bolder"}}>Most indoor business operations are open wth modifications</p>
+                  <p style={{fontWeight:"bolder"}}>Most indoor business operations are open with modifications</p>
               </label >
             </Card >
         </Box>
@@ -245,7 +245,7 @@ export default class App extends Component {
                     <p>WIDESPREAD</p>
                   </Card>
                   <p style={{fontWeight:"bolder", textAlign:'left', paddingLeft:'10%'}}> • More than 10.0 daily new cases (per 100k)*</p>
-                  <p style={{fontWeight:"bolder", textAlign:'left', paddingLeft:'10%'}}>• More than 8.0% positive test for entire county**</p>
+                  <p style={{fontWeight:"bolder", textAlign:'left', paddingLeft:'10%'}}>• More than 8.0% positive test for entire county*</p>
               </label >
               <label style={{width:'25%', height:"300px", margin: '10% 0% 0% 0%', backgroundColor:'#f3d8dd'}}>
                   <Card style={{width:'60%', margin: '10% 0% 0% 20%', borderRadius:"8%", backgroundColor:"#c43d53", webkitTextFillColor:"white", textAlign:'center', fontSize:'100%', fontWeight:"bolder"}}>
@@ -253,9 +253,8 @@ export default class App extends Component {
                   </Card>
                   <p style={{fontWeight:"bolder", textAlign:'left', paddingLeft:'10%'}}>• 6.0 –10.0 daily new cases (per 100k)*</p>
 
-                  <p style={{fontWeight:"bolder", textAlign:'left', paddingLeft:'10%'}}>• 5.0 – 8.0% positive tests for entire county**</p>
+                  <p style={{fontWeight:"bolder", textAlign:'left', paddingLeft:'10%'}}>• 5.0 – 8.0% positive tests for entire county*</p>
 
-                  <p style={{fontWeight:"bolder", textAlign:'left', paddingLeft:'10%'}}>• Less than 8.1% positive tests for health equity quartile**</p>
               </label >
               <label style={{width:'25%', height:"300px", margin: '10% 0% 0% 0%', backgroundColor:'#f7e4d9'}}>
                   <Card style={{width:'60%', margin: '10% 0% 0% 20%', borderRadius:"8%", backgroundColor:"#d97641", justifyContent: 'center', textAlign:'center', fontSize:'100%', fontWeight:"bolder"}}>
@@ -263,9 +262,8 @@ export default class App extends Component {
                   </Card>
                   <p style={{fontWeight:"bolder", textAlign:'left', paddingLeft:'10%'}}>• 2.0 –5.9 daily new cases (per 100k)*</p>
 
-                  <p style={{fontWeight:"bolder", textAlign:'left', paddingLeft:'10%'}}>• 2.0 – 4.9% positive tests for entire county**</p>
+                  <p style={{fontWeight:"bolder", textAlign:'left', paddingLeft:'10%'}}>• 2.0 – 4.9% positive tests for entire county*</p>
 
-                  <p style={{fontWeight:"bolder", textAlign:'left', paddingLeft:'10%'}}>• Less than 5.3% positive tests for health equity quartile**</p>
               </label >
               <label style={{width:'25%', height:"300px", margin: '10% 0% 0% 0%', backgroundColor:'#faf1d7'}}>
                   <Card style={{width:'60%', margin: '10% 0% 0% 20%', borderRadius:"8%", backgroundColor:"#e6b735",  justifyContent: 'center', textAlign:'center', fontSize:'100%', fontWeight:"bolder"}}> 
@@ -273,11 +271,13 @@ export default class App extends Component {
                   </Card>
                   <p style={{fontWeight:"bolder", textAlign:'left', paddingLeft:'10%'}}>• Less than 2.0 daily new cases (per 100k*)</p>
 
-                  <p style={{fontWeight:"bolder", textAlign:'left', paddingLeft:'10%'}}>• Less than 2.0% positive tests for entire county**</p>
+                  <p style={{fontWeight:"bolder", textAlign:'left', paddingLeft:'10%'}}>• Less than 2.0% positive tests for entire county*</p>
 
-                  <p style={{fontWeight:"bolder", textAlign:'left', paddingLeft:'10%'}}>• Less than 2.2% positive tests for health equity quartile**</p>
               </label >
             </label >
+	    <Card style={{width:'60%', margin: '10% 0% 0% 20%', borderRadius:"8%", backgroundColor:"white",  justifyContent: 'center', textAlign:'center', fontSize:'100%', fontWeight:"bolder"}}>
+      		<p>* Taken on 7 day average of daily cases</p>
+	</Card>
         </Box>
      </div> 
     )
