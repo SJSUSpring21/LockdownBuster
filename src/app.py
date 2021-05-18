@@ -12,8 +12,8 @@ app.config['CORS_HEADERS'] = 'Content-Type'
 weight_factor = 1
 sectors = ["Education", "Limited Services", "Food Chain", "Industries", "Construction", "Entertainment", "Retail Sector"]
 
-def getPrediction(county_name):
-    county = pd.read_csv("~/LockDownBuster/LockdownBuster/dataset/CountyWiseCases.csv")
+def getPrediction(county_name,sector):
+    county = pd.read_csv("/home/ubuntu/LockdownBuster/dataset/CountyWiseCases.csv")
     county['date'] = pd.DatetimeIndex(county['date'])
     df = county.loc[(county["area"] == county_name)]
 
@@ -24,11 +24,11 @@ def getPrediction(county_name):
     apr = get_active_case_prediction(df,df.population.unique()[0])
 
     #getting vaccination prediction
-    vpr = get_vaccination_prediction(county_name,df.population.unique()[0])
+    vpr = get_vaccination_prediction(county_name,df.population.unique()[0],sector)
     return {"prediction_ac" : apr,"prediction_vc" : vpr,"current_status":curr}
 
-def get_vaccination_prediction(county_name, population):
-    df = pd.read_csv("~/LockDownBuster/LockdownBuster/dataset/covid19vaccinesbycounty.csv", usecols=[0, 1, 13])
+def get_vaccination_prediction(county_name, population,sector):
+    df = pd.read_csv("/home/ubuntu/LockdownBuster/dataset/covid19vaccinesbycounty.csv", usecols=[0, 1, 13])
     df['administered_date'] = pd.DatetimeIndex(df['administered_date'])
     # Getting the county wise data
     df = df.loc[(df["county"] == county_name)]
@@ -40,23 +40,23 @@ def get_vaccination_prediction(county_name, population):
     df_train.columns = ['y', 'ds']
     vp = vac_predMod(df_train);
     date_op = "2021-07-19"
+    if sector == 'Education':
+        weight_factor = 1
+    elif sector == 'Limited services':
+        weight_factor = 0.8
+    elif sector == 'Food chain':
+        weight_factor = 0.85
+    elif sector == 'Industries':
+        weight_factor = 0.7
+    elif sector == 'Construction':
+        weight_factor = 0.8
+    elif sector == 'Entertainment':
+        weight_factor = 0.95
+    elif sector == 'Retail sector':
+        weight_factor = 0.9
+    else:
+        weight_factor = 1
     for index, row in vp.iterrows():
-        if sectors == 'Education':
-            weight_factor = 1
-        elif sectors == 'Limited Services':
-            weight_factor = 0.8
-        elif sectors == 'Food Chain':
-            weight_factor = 0.8
-        elif sectors == 'Industries':
-            weight_factor = 0.7
-        elif sectors == 'Construction':
-            weight_factor = 0.8
-        elif sectors == 'Entertainment':
-            weight_factor = 0.9
-        elif sectors == 'Retail Sector':
-            weight_factor = 0.9
-        else:
-            weight_factor = 1
         if(row['yhat'] > (weight_factor * population)):
             date_op = row['ds']
             break;
@@ -139,9 +139,8 @@ def hello_world():
 def predict():
     if request.method == 'POST':
         county = json.loads(request.data)['county']
-        sectors = json.loads(request.data)['sector']
         sector = json.loads(request.data)['sector']
-        order = getPrediction(county)
+        order = getPrediction(county,sector)
         return order
 
 
