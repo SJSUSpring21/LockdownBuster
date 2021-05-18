@@ -23,4 +23,4 @@ https://data.sccgov.org/COVID-19/COVID-19-vaccinations-among-county-residents-by
 
 ## System Architecture
 
-![sys_arch](https://user-images.githubusercontent.com/31523964/110229353-ae1d3300-7ebd-11eb-8df6-653bae2d1360.png)
+![sys_arch](https://user-images.githubusercontent.com/31523964/118732903-1e1a3480-b7f0-11eb-88ef-2f5353832b9b.png)
